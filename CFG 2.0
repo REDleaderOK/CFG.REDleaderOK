@@ -1,0 +1,221 @@
+//CFG RED
+//parametros de lanzamiento : -language bananagaming_spanish -high -threads 8 -exec autoexec.cfg -novid -console -tickrate 128 +mat_queue_mode 2 +cl_forcepreload 1
+
+clear
+//
+sensitivity "2"
+zoom_sensitivity_ratio_mouse "1"
+//||
+bind "0" "slot10"
+bind "1" "slot1"
+bind "2" "slot2"
+bind "3" "slot3"
+bind "4" "slot4"
+bind "5" "slot5"
+bind "a" "+moveleft"
+bind "b" "buymenu"
+bind "k" "radio3"
+bind "d" "+moveright"
+bind "e" "+use"
+bind "f" "r_cleardecals"
+bind "g" "drop"
+bind "i" "say GGWP"
+bind "x" "+voicerecord"
+bind "l" "say GH"
+bind "m" "teammenu"
+bind "p" "say_team NEED BACKUP C4 HERE!; needbackup"
+bind "q" "lastinv"
+bind "r" "+reload"
+bind "t" "+spray_menu" //abre el menu de los grafitis
+bind "s" "+back" //atras
+bind "u" "messagemode2"
+bind "w" "+forward" //adelante
+bind "y" "messagemode"
+bind "k" "say GL HF;kill"
+bind "F12" "toggleconsole"
+bind "TAB" "+showscores" //muestra los scores
+bind "ESCAPE" "cancelselect"
+bind "PAUSE" "pause" 
+bind "SHIFT" "+speed" //caminar
+bind "CTRL" "+duck" //agacharce
+bind "rightarrow" "+right" //modo afk derecha :v
+bind "leftarrow" "+left" //modo afk izquierda :v
+bind "pgup" voice_enable 0
+bind "9" "use weapon_c4;drop"
+bind "Mouse1" "+attack" //disparar
+bind "Mouse2" "+attack2" //zoom
+bind "Mwheeldown" "+jump" //saltar con la rueda hacia arriva 
+bind "Mwheelup" "+jump"   //saltar con la rueda hacia abajo
+bind "space" "+jump" //saltar con el espacio
+bind "capslock" "toggle cl_righthand 0 1"
+bind "v" "+lookatweapon" //inpeccionar arma
+Bind "F5" "autobuy"
+
+//FAST BUYs
+bind "F1" " buy vesthelm; buy vest;"
+bind "F2" " buy defuser;"
+bind "F3" " buy flashbang; buy hegrenade; buy smokegrenade; buy incgrenade; buy molotov;"
+
+
+//binds de las granadas(agarrarlas)(con el mouse solo)
+bind "mouse5" "use weapon_incgrenade;use weapon_molotov" 
+bind "mouse4" "use weapon_flashbang"
+bind "4" "use weapon_hegrenade" //he
+bind "0" "use weapon_smokegrenade" //smoke
+bind "8" "use weapon_decoy" //dekoy
+
+//Display Damage with Switch Script
+
+//alias displaydamage "displaydamage_on"
+//alias displaydamage_on "con_filter_text Damage Given To; con_filter_text_out Player:; con_filter_enable 2; developer 1; playvol buttonslip1 0.5; alias displaydamage "displaydamage_off""
+//alias displaydamage_off "con_filter_enable 0; developer 0; playvol buttonslip2 0.5; alias displaydamage "displaydamage_on""
+//bind "F4" "displaydamage"
+
+developer "1"
+con_filter_text "Damage"
+con_filter_text_out "Player:"
+con_filter_enable "2"
+
+//JUMPTHROW DE LAS GRANADAS
+
+bind "n" +jumpthrow; alias +jumpthrow "+jump; -attack"; alias -jumpthrow -jump
+
+//GAME INSTRUCTOR PARA LOS SUCULENTOS NINJAS
+bindtoggle "h" gameinstructor_enable
+//||||
+
+cl_cmdrate "128"
+
+//LA CROSSHAIR
+//|||||||LA CROSSHAIR|
+cl_crosshair_drawoutline "1"
+cl_crosshair_dynamic_maxdist_splitratio "0.300000"
+cl_crosshair_dynamic_splitalpha_innermod "1"
+cl_crosshair_dynamic_splitalpha_outermod "0.500000"
+cl_crosshair_dynamic_splitdist "7"
+cl_crosshair_friendly_warning "2"
+cl_crosshair_outlinethickness "1.000000"
+cl_crosshair_sniper_show_normal_inaccuracy "0"
+cl_crosshair_sniper_width "1"
+cl_crosshair_t "0"
+cl_crosshairalpha "234.000000"
+cl_crosshaircolor "5"
+cl_crosshaircolor_b "255"
+cl_crosshaircolor_g "255"
+cl_crosshaircolor_r "0"
+cl_crosshairdot "0"
+cl_crosshairgap "-1.092987"
+cl_crosshairgap_useweaponvalue "0"
+cl_crosshairsize "4.219086"
+cl_crosshairstyle "4"
+cl_crosshairthickness "1.100000"
+cl_crosshairusealpha "1"
+cl_fixedcrosshairgap "3.000000"
+//||||||FIN DE LA CROSSHAIR||
+
+
+cl_righthand "1"
+cl_rumblescale "1.0"
+
+cl_updaterate "128"
+
+
+
+//|||||||||||VIEWMODEL|||||
+cl_viewmodel_shift_left_amt "0.500000"
+cl_viewmodel_shift_right_amt "0.250000"
+viewmodel_fov "68"
+viewmodel_offset_x "2"
+viewmodel_offset_y "2"
+viewmodel_offset_z "-1"
+viewmodel_presetpos "0"
+viewmodel_recoil "0"
+cl_bob_lower_amt "5.000000"
+cl_bobamt_lat "0.100000"
+cl_bobamt_vert "0.100000"
+cl_bobcycle "0.98"
+//FIN DEL VIEWMODEL||||||
+
+
+// NETCODE
+rate 				"128000
+cl_cmdrate 			"128"				
+cl_updaterate 			"128"				
+cl_interp 			"0"
+cl_interp_ratio 		"1"
+cl_predictweapons 		"1"
+clientport 			"1337"
+
+
+//HUD Y RADAR
+ 
+hud_showtargetid 		"1"
+cl_autowepswitch 		"0"
+cl_hud_background_alpha "1.000000"
+cl_hud_bomb_under_radar "1"
+cl_hud_color "1"
+cl_hud_healthammo_style "1"
+cl_hud_playercount_pos "1"
+cl_hud_playercount_showcount "0"
+cl_hud_radar_scale "1.3"
+hud_scaling "0.950000"
+hud_showtargetid "1"
+cl_showloadout "1"
+safezonex "1"
+
+cl_radar_always_centered "1"
+cl_radar_icon_scale_min "0.7"
+cl_radar_rotate "1"
+cl_radar_scale "0.3"
+cl_radar_square_with_scoreboard "1"
+
+// Comandos pa subir fps y mejor game
+cl_use_opens_buy_menu "0"
+mat_monitorgamma "1.6"
+snd_headphone_pan_exponent "2.5"
+cl_disablefreezecam "1"
+cl_showhelp 0;
+cl_disablehtmlmotd "1"
+cl_autohelp 0;
+fps_max "0"
+fps_max_menu "60"
+mat_queue_mode "2"
+cl_freezecameffects_showholiday 0;
+r_dynamic "1"
+gameinstructor_enable 0
+r_drawtracers_firstperson "0"
+r_eyegloss "0"
+r_eyemove "0"
+r_eyeshift_x "0"
+r_eyeshift_y "0"
+r_eyeshift_z "0"
+r_eyesize "0"
+snd_mixahead "0.05"
+cl_threaded_bone_setup 1
+
+net_graph 0
+net_graphpos 90
+
+host_writeconfig
+
+//ESTO PARA QUE LA SENSI SE AJUSTE AL REESCALADO sin los // = activada 
+//EJE X
+//16:10 streched
+//m_yaw 0.018
+
+// 4:3 reescalado
+m_yaw 0.0168
+
+//16:9 default									
+//m_yaw 0.0223
+
+// eje Y
+//default no c toca
+m_pitch 0.0223
+
+Clear
+echo "  ___ ___ ___  _                _          ___  _  __"
+echo " | _ \ __|   \| |   ___ __ _ __| |___ _ _ / _ \| |/ /"
+echo " |   / _|| |) | |__/ -_) _` / _` / -_) '_| (_) | ' < "
+echo " |_|_\___|___/|____\___\__,_\__,_\___|_|  \___/|_|\_\"
+echo "                                                    "
