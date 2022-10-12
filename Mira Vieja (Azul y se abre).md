@@ -1,4 +1,6 @@
-//mira
+//mira Azul que se abre con punto en el centro ajsdi
+//si tienen CFG solo reemplacenla con la que tengan, sino pongan cada comando uno a uno :)
+
 
 cl_crosshair_drawoutline "0"
 cl_crosshair_dynamic_maxdist_splitratio "0.35"
